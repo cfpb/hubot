@@ -30,7 +30,7 @@ mockery.disable()
 describe 'Robot', ->
   beforeEach ->
     @robot = new Robot null, 'mock-adapter', yes, 'TestHubot'
-    @robot.alias = 'Hubot'
+    @robot.alias = 'Hubot,Foobot,.,/'
     @robot.run
 
     # Re-throw AssertionErrors for clearer test failures
@@ -93,13 +93,27 @@ describe 'Robot', ->
         expect(match).to.equal('message123')
 
       it 'matches messages starting with robot\'s alias', ->
-        testMessage = @robot.alias + 'message123'
+        testMessage = 'Hubotmessage123'
         testRegex   = /(.*)/
 
         pattern = @robot.respondPattern testRegex
         expect(testMessage).to.match(pattern)
         match = testMessage.match(pattern)[1]
         expect(match).to.equal('message123')
+
+      it 'matches messages starting with any of multiple robot aliases', ->
+
+        robot = @robot
+        aliases = robot.alias.split ','
+
+        aliases.forEach (alias) ->
+          testMessage = alias + 'message123'
+          testRegex   = /(.*)/
+
+          pattern = robot.respondPattern testRegex
+          expect(testMessage).to.match(pattern)
+          match = testMessage.match(pattern)[1]
+          expect(match).to.equal('message123')
 
       it 'does not match unaddressed messages', ->
         testMessage = 'message123'
