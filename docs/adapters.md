@@ -35,6 +35,7 @@ to have yours added to the list:
 * [Lingr](https://github.com/miyagawa/hubot-lingr)
 * [Mattermost](https://github.com/renanvicente/hubot-mattermost)
 * [Mattermost](https://github.com/loafoe/hubot-matteruser) - websocket
+* [Messenger Platform](https://github.com/ClaudeBot/hubot-messenger-bot)
 * [QQ](https://github.com/xhan/qqbot)
 * [Partychat](https://github.com/iangreenleaf/hubot-partychat-hooks)
 * [Proxy](https://github.com/Hammertime38/hubot-proxy) - This adapter allows the base application to observe, handle, and control events sent to the proxied adapter, all defined in a config object at the root of the module.
@@ -51,6 +52,7 @@ to have yours added to the list:
 * [Typetalk](https://github.com/nulab/hubot-typetalk)
 * [VictorOps](https://github.com/victorops/hubot-victorops)
 * [Visual Studio Online](https://github.com/scrumdod/hubot-VSOnline)
+* [Weixin](https://github.com/KasperDeng/Hubot-WeChat)
 * [XMPP](https://github.com/markstory/hubot-xmpp)
 * [Yammer](https://github.com/athieriot/hubot-yammer)
 
